@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+.gameboy-area {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboy {
+    width: 400px;
+    height: 700px;
+    background-color: #343434;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 120px;
+}
+
+.screen-area {
+    width: 340px;
+    height: 300px;
+    margin: 50px auto;
+    background-color: #b0afaf;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    padding: 30px 0px;
+}
+
+.display {
+    width: 260px;
+    height: 240px;
+    margin: 0px auto;
+    background-color: rgba(255, 255, 0, 0.261);
+}
+
+.brand p {
+    color: #ffff;
+    padding-left: 30px;
+}
+
+
+/* .gameboy-body .buttons {
+    display: grid;
+    grid-template-areas: "directiong gameplay" "options options";
+} */
+
+.gameboy-body .buttons .direction-keys {
+    padding-left: 60px;
+    position: relative;
+    width: 140px;
+    display: inline-block;
+}
+
+.gameboy-body .buttons .direction-keys .up {
+    background-color: #ffff;
+    width: 40px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.gameboy-body .buttons .direction-keys .down {
+    background-color: #ffff;
+    width: 40px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.gameboy-body .buttons .direction-keys .left {
+    background-color: #ffff;
+    width: 30px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.gameboy-body .buttons .direction-keys .right {
+    background-color: #ffffff;
+    width: 30px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+
+.gameboy-body .buttons .direction-keys .middle {
+    background-color: #585858;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    position: absolute;
+    top: 30px;
+}
+
+.gameboy-body .buttons .gameplay-key {
+    grid-area: gameplay;
+    display: inline-block;
+}
+
+.gameboy-body .buttons .gameplay-key .key-a .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: pink;
+}
+
+.key-a,
+.key-b {
+    display: inline-block;
+}
+
+.gameboy-body .buttons .gameplay-key .key-b .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: pink;
+}
+
+.label {
+    color: #ffff;
+    text-align: center;
+}
+
+.visual {
+    width: 30px;
+    height: 15px;
+    background-color: #c2c2c2;
+}
+
+.options-key {
+    grid-area: options;
+    display: flex;
+}
