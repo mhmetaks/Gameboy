@@ -44,34 +44,36 @@
     padding-left: 30px;
 }
 
+.gameboy-body {
+    max-width: 350px;
+}
 
-/* .gameboy-body .buttons {
-    display: grid;
-    grid-template-areas: "directiong gameplay" "options options";
-} */
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
 
-.gameboy-body .buttons .direction-keys {
+.controls .direction {
     padding-left: 60px;
     position: relative;
     width: 140px;
-    display: inline-block;
 }
 
-.gameboy-body .buttons .direction-keys .up {
+.controls .direction .up {
     background-color: #ffff;
     width: 40px;
     height: 50px;
     border-radius: 5px;
 }
 
-.gameboy-body .buttons .direction-keys .down {
+.controls .direction .down {
     background-color: #ffff;
     width: 40px;
     height: 50px;
     border-radius: 5px;
 }
 
-.gameboy-body .buttons .direction-keys .left {
+.controls .direction .left {
     background-color: #ffff;
     width: 30px;
     height: 40px;
@@ -82,7 +84,7 @@
     left: 30px;
 }
 
-.gameboy-body .buttons .direction-keys .right {
+.controls .direction .right {
     background-color: #ffffff;
     width: 30px;
     height: 40px;
@@ -93,7 +95,7 @@
     right: 10px;
 }
 
-.gameboy-body .buttons .direction-keys .middle {
+.controls .direction .middle {
     background-color: #585858;
     width: 40px;
     height: 40px;
@@ -102,24 +104,15 @@
     top: 30px;
 }
 
-.gameboy-body .buttons .gameplay-key {
-    grid-area: gameplay;
-    display: inline-block;
+.buttons .controls .gameplay {
+    display: flex;
 }
 
-.gameboy-body .buttons .gameplay-key .key-a .circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: pink;
+.gameplay-a {
+    margin-top: 40px;
 }
 
-.key-a,
-.key-b {
-    display: inline-block;
-}
-
-.gameboy-body .buttons .gameplay-key .key-b .circle {
+.buttons .controls .gameplay .circle {
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -127,17 +120,24 @@
 }
 
 .label {
+    margin-top: 5px;
+    margin-left: 15px;
     color: #ffff;
     text-align: center;
+    transform: rotate(-20deg);
 }
 
-.visual {
-    width: 30px;
-    height: 15px;
+.options .visual {
+    width: 60px;
+    height: 20px;
     background-color: #c2c2c2;
+    border-radius: 5px;
+    transform: rotate(-20deg);
 }
 
-.options-key {
-    grid-area: options;
+.options {
+    margin-top: 40px;
     display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
 }
