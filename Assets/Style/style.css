@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 .gameboy-area {
     max-width: 100%;
     height: 100vh;
@@ -11,112 +13,129 @@
 }
 
 .gameboy {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     height: 700px;
-    background-color: #343434;
+    background-color: #4269a5;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 120px;
+    padding: 50px 30px;
+    box-shadow: 0px 1px 3px #00000071;
 }
 
 .screen-area {
-    width: 340px;
+    max-width: 340px;
     height: 300px;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     background-color: #b0afaf;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 50px;
     padding: 30px 0px;
+    padding: 30px 40px;
+    /* border: solid 1px #191919; */
+    box-shadow: 0px 1px 3px #00000071;
 }
 
 .display {
-    width: 260px;
+    max-width: 260px;
     height: 240px;
-    margin: 0px auto;
-    background-color: rgba(255, 255, 0, 0.261);
+    /* margin: 0px auto; */
+    background-color: #ffff0043;
+    box-shadow: 0px 1px 3px #00000071;
 }
 
-.brand p {
+.brand .title {
     color: #ffff;
     padding-left: 30px;
+    font-size: 1.5rem;
 }
 
-.gameboy-body {
-    max-width: 350px;
-}
-
-.controls {
+.controller .upper-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-.controls .direction {
-    padding-left: 60px;
+.upper-buttons .direction {
     position: relative;
     width: 140px;
 }
 
-.controls .direction .up {
+.upper-buttons .direction .up {
+    background-color: #ffff;
+    width: 40px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+}
+
+.upper-buttons .direction .down {
     background-color: #ffff;
     width: 40px;
     height: 50px;
     border-radius: 5px;
+    position: absolute;
+    left: 30px;
+    top: 50px;
 }
 
-.controls .direction .down {
+.upper-buttons .direction .left {
     background-color: #ffff;
-    width: 40px;
-    height: 50px;
-    border-radius: 5px;
-}
-
-.controls .direction .left {
-    background-color: #ffff;
-    width: 30px;
+    width: 50px;
     height: 40px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     position: absolute;
+    left: 0px;
     top: 30px;
-    left: 30px;
 }
 
-.controls .direction .right {
+.upper-buttons .direction .right {
     background-color: #ffffff;
-    width: 30px;
+    width: 50px;
     height: 40px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     position: absolute;
+    left: 50px;
     top: 30px;
-    right: 10px;
 }
 
-.controls .direction .middle {
+.upper-buttons .direction .middle {
     background-color: #585858;
     width: 40px;
     height: 40px;
     border-radius: 40%;
     position: absolute;
     top: 30px;
+    left: 30px;
 }
 
-.buttons .controls .gameplay {
+.upper-buttons .gameplay {
     display: flex;
 }
 
-.gameplay-a {
+.gameplay .gameplay-a {
     margin-top: 40px;
+    margin-right: 10px;
 }
 
-.buttons .controls .gameplay .circle {
-    width: 50px;
-    height: 50px;
+.gameplay .circle {
+    width: 55px;
+    height: 55px;
     border-radius: 50px;
-    background-color: pink;
+    background-color: #ff6d1f;
+}
+
+.gameplay .circle:focus {
+    box-shadow: 12px 10px 30px #0c0c0c;
 }
 
 .label {
@@ -125,9 +144,17 @@
     color: #ffff;
     text-align: center;
     transform: rotate(-20deg);
+    font-size: 1rem;
 }
 
-.options .visual {
+.controller .options {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
+
+.controller .options .rectangle {
     width: 60px;
     height: 20px;
     background-color: #c2c2c2;
@@ -135,9 +162,20 @@
     transform: rotate(-20deg);
 }
 
-.options {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 100px;
+.button {
+    border: none;
+    box-shadow: 0px 1px 3px #00000071;
 }
+
+.button:hover {
+    cursor: pointer;
+}
+
+
+/*TO DO
+--butonlar div yapısından buttons yapısına geçicek++
+--renk paleti seçilecek
+--controls yerkeştrimesi screen ile orantılı olaacak
+--butonların focus özelliği aktif edilecek
+--buton click event is
+--button effects
